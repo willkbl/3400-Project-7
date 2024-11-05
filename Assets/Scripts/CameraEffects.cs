@@ -14,6 +14,8 @@ public class CameraEffects : MonoBehaviour
 
     public Grain gr;
     public ChromaticAberration ab;
+    public LensDistortion ld;
+    public Bloom b;
     public PostProcessVolume volume;
     public Transform player;
 
@@ -28,9 +30,13 @@ public class CameraEffects : MonoBehaviour
     {
         volume.profile.TryGetSettings(out ab);
         volume.profile.TryGetSettings(out gr);
+        volume.profile.TryGetSettings(out ld);
+        volume.profile.TryGetSettings(out b);
         ab.intensity.value = (player.position.z / 30) * aberrationMaxIntensity;
         gr.intensity.value = (player.position.z / 30) * grainMaxIntensity;
         gr.size.value = (player.position.z / 30) * grainMaxSize;
+        ld.intensity.value = (player.position.z);
+        b.intensity.value = (player.position.z / 5);
         //Debug.Log(ab.intensity.value);
     }
 }
