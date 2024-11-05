@@ -22,10 +22,10 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-//        if (!PauseMenuBehavior.isGamePaused)
-//        {
-            float moveX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float moveY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        //        if (!PauseMenuBehavior.isGamePaused)
+        //        {
+        float moveX = Input.GetAxis("Mouse X") * mouseSensitivity; //* Time.deltaTime;
+        float moveY = Input.GetAxis("Mouse Y") * mouseSensitivity; //* Time.deltaTime;
 
             //yaw
             playerBody.Rotate(Vector3.up * moveX);
