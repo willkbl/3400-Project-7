@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     AudioSource footstepsSource;
     public float footstepsVolume = 1.0f;
+    public float footstepsPitchVariance = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(moveDirection * Time.deltaTime);
 
-        footstepsSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+        footstepsSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f) + footstepsPitchVariance;
         if ((moveHorizontal > 0.1 || moveVertical > 0.1) && controller.isGrounded)
         {
             footstepsSource.volume = footstepsVolume;
