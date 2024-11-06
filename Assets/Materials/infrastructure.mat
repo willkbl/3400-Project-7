@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: infrastructure
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 2100000, guid: df8994c6425472e4eac7a56473bf1fb9, type: 2}
+  m_Parent: {fileID: 2100000, guid: 49bcf1b87a2435842b0e1f4368b61ae4, type: 2}
   m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
   - _METALLICGLOSSMAP
@@ -49,11 +49,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _DstBlend: 0
-    - _GlossMapScale: 0.716
+    - _GlossMapScale: 0.543
     - _Glossiness: 0.42
     - _GlossyReflections: 1
     - _Metallic: 0.95
     - _Mode: 0
+    - _Parallax: 0.0354
     - _SpecularHighlights: 1
     - _ZWrite: 1
     m_Colors:
